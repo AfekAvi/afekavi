@@ -1,0 +1,185 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #333;
+    background: linear-gradient(135deg, #e8f0ff, #ffffff);
+    line-height: 1.6;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #4e54c8;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Ensures links are centered */
+    align-items: center;
+    gap: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+nav .nav-links li {
+    padding: 0 10px;
+}
+
+nav .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav .nav-links a:hover {
+    background-color: whitesmoke;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 5px solid #4e54c8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-in-out;
+}
+
+main h2 {
+    font-size: 2rem;
+    color: #4e54c8;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ece9e6;
+    padding-bottom: 10px;
+}
+
+main p {
+    margin-bottom: 20px;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* Profile Image */
+.profile-image {
+    display: block;
+    margin: 0 auto 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #4e54c8;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+/* List Styles */
+ul {
+    margin-left: 20px;
+    list-style: disc;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #4e54c8;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #ff6f61;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}
